@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -23,7 +24,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="gVO-vu-h5B">
-                                <rect key="frame" x="16" y="79" width="343" height="97"/>
+                                <rect key="frame" x="16" y="79" width="343" height="448"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Rri-Ct-bLC">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="96.5"/>
@@ -52,6 +53,12 @@
                                             <constraint firstAttribute="trailing" secondItem="bUQ-Ik-iej" secondAttribute="trailing" id="pwF-wu-yXN"/>
                                         </constraints>
                                     </stackView>
+                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="3WX-Em-1Sw">
+                                        <rect key="frame" x="0.0" y="104.5" width="343" height="343"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="3WX-Em-1Sw" secondAttribute="height" multiplier="1:1" id="zbk-Fk-Pjp"/>
+                                        </constraints>
+                                    </imageView>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -65,6 +72,7 @@
                     <connections>
                         <outlet property="mealNameLabel" destination="zb0-4g-s5X" id="sbh-aF-iPf"/>
                         <outlet property="nameTextField" destination="bUQ-Ik-iej" id="Jn1-KY-mbe"/>
+                        <outlet property="photoImageView" destination="3WX-Em-1Sw" id="t8Z-J1-dpd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -72,4 +80,7 @@
             <point key="canvasLocation" x="24.800000000000001" y="35.532233883058474"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Image" width="345" height="285"/>
+    </resources>
 </document>
