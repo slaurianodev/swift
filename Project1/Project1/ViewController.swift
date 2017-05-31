@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UITableViewController { // UITableViewController Apple’s most basic type of screen
 
     var pictures = [String]()
     
